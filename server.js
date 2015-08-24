@@ -13,7 +13,7 @@ app.use( logger('dev') );
 app.use( bodyParser.urlencoded({ extended: false }) );
 app.use( bodyParser.json() );
 // set up method override for PUT and DELETE
-app.use( methodOverride() );
+// app.use( methodOverride() );
 // set up serving of static assets
 app.use( express.static( path.join( application_root, 'public' ) ) );
 app.use( express.static( path.join( application_root, 'browser' ) ) );

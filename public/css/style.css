@@ -1,0 +1,70 @@
+body {
+	font-family: mathlete, amatic;
+	width: 99%;
+	height: 100%;
+}
+
+.header {
+	text-align: center;
+}
+
+.header hr {
+  width: 63%;
+}
+
+.nav {
+	position: relative;
+	text-align: center;
+	top: 70px;
+	width: 25%;
+	margin: auto;
+}
+
+h1 {
+	font-size: 5em;
+	position: relative;
+	margin: 10px;
+}
+
+h2 {
+	font-size: 5em;
+	position: relative;
+	margin: 60px;
+	cursor: pointer;
+}
+
+#nav1 {
+	-webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/*#nav1:hover:before {
+	content: "voir";
+}
+
+#nav1:hover:after {
+	content: "see";
+}*/
+
+#nav2 {
+	-webkit-animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#nav3 {
+	-webkit-animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 99%;
+}
+
+footer hr {
+  width: 43%;
+}
