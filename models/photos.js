@@ -4,8 +4,12 @@ module.exports = function(sequelize, DataTypes) {
     title: DataTypes.STRING,
     location: DataTypes.STRING,
     tags: DataTypes.TEXT,
-    date: DataTypes.STRING
+    date: DataTypes.STRING,
+    photo_url: DataTypes.TEXT
   }, {
+
+    uderscored: true,
+    
     classMethods: {
       associate: function(models) {
         // associations can be defined here
