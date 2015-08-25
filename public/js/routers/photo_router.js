@@ -4,9 +4,9 @@ App.Routers.PhotosRouter = Backbone.Router.extend({
 	},
 
 	initialize: function() {
-	App.photos = new App.Collections.Photos;
-	App.photosView = new App.Views.Photos({ collection: App.photos });
-	App.photos.fetch({ reset: true });
+		App.photos = new App.Collections.Photos;
+		App.photosView = new App.Views.Photos({ collection: App.photos });
+		App.photos.fetch({ reset: true });
 	},
 
 	index: function() {

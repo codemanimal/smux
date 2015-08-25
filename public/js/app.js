@@ -39,8 +39,9 @@ $(function() {
 
 var voir = function() {
 	console.log('clicked');
-
-	App.photoRouter = new App.Routers.Photo();
+	debugger;
+	
+	App.photoRouter = new App.Routers.PhotosRouter();
 	Backbone.history.start();
 
 	// $('#nav1').removeClass('fadeIn');
