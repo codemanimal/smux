@@ -35,14 +35,15 @@ $(function() {
 
 	$('#nav1').on('click', voir);
 
+	App.Routers.photosRouter = new App.Routers.PhotosRouter();
+	Backbone.history.start();
+
 });
 
 var voir = function() {
 	console.log('clicked');
 	debugger;
 	
-	App.photoRouter = new App.Routers.PhotosRouter();
-	Backbone.history.start();
 
 	// $('#nav1').removeClass('fadeIn');
 	// $('#nav1').addClass('fadeOut');

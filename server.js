@@ -2,10 +2,10 @@ var application_root = __dirname,
     express          = require('express'),
     bodyParser       = require('body-parser'),
     path             = require('path'),
-    logger           = require('morgan'),
-    models           = require('./models'),
-    Photo 					 = models.photos,
-    photoRouter 		 = require('./routers/photo_router.js');
+    logger           = require('morgan');
+    // models           = require('./models'),
+    // Photo 					 = models.photos,
+    // photoRouter 		 = require('./routers/photo_router.js');
 
 var app = express();
 
@@ -20,7 +20,7 @@ app.use( bodyParser.json() );
 app.use( express.static( path.join( application_root, 'public' ) ) );
 app.use( express.static( path.join( application_root, 'browser' ) ) );
 
-app.use('/photos', photoRouter);
+// app.use('/photos', photoRouter);
 
 // Routes
 
