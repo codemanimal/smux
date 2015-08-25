@@ -3,7 +3,9 @@ var application_root = __dirname,
     bodyParser       = require('body-parser'),
     path             = require('path'),
     logger           = require('morgan'),
-    models           = require('./models');
+    models           = require('./models'),
+    Photo 					 = models.photos,
+    photoRouter 		 = require('./routers/photo_router.js');
 
 var app = express();
 
@@ -17,6 +19,8 @@ app.use( bodyParser.json() );
 // set up serving of static assets
 app.use( express.static( path.join( application_root, 'public' ) ) );
 app.use( express.static( path.join( application_root, 'browser' ) ) );
+
+app.use('/photos', photoRouter);
 
 // Routes
 
