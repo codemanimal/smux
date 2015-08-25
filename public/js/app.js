@@ -33,4 +33,17 @@ $(function() {
 		$('#nav3').text('connaître');
 	});
 
+	$('#nav1').on('click', voir);
+
 });
+
+var voir = function() {
+	console.log('clicked');
+
+	App.photoRouter = new App.Routers.Photo();
+	Backbone.history.start();
+
+	// $('#nav1').removeClass('fadeIn');
+	// $('#nav1').addClass('fadeOut');
+
+};

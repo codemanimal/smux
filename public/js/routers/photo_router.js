@@ -1,13 +1,16 @@
-var express = require('express'),
-		models  = require('..models'),
-		Photo   = models.photos;
+App.Routers.PhotosRouter = Backbone.Router.extend({
+	routes: {
+		'': 'index'
+	},
 
-var photoRouter = express.Router();
+	initialize: function() {
+	App.photos = new App.Collections.Photos;
+	App.photosView = new App.Views.Photos({ collection: App.photos });
+	App.photos.fetch({ reset: true });
+	},
 
-photoRouter.get('/', function(req, res) {
-	Photo
-		.findAll()
-		.then(function(photos) {
-			res.send(photos);
-		});
+	index: function() {
+		console.log("photos router hit")
+	}
+
 });

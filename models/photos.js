@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     title: DataTypes.STRING,
     location: DataTypes.STRING,
     tags: DataTypes.TEXT,
-    date: DataTypes.STRING,
+    photo_date: DataTypes.STRING,
     photo_url: DataTypes.TEXT
   }, {
 
