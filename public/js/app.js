@@ -1,10 +1,3 @@
-var App = {
-	Models: {},
-	Collections: {},
-	Views: {},
-	Routers: {}
-};
-
 $(function() {
 	console.log('Loaded, bro.');
 
@@ -35,17 +28,29 @@ $(function() {
 
 	$('#nav1').on('click', voir);
 
-	App.Routers.photosRouter = new App.Routers.PhotosRouter();
-	Backbone.history.start();
-
 });
 
 var voir = function() {
+
 	console.log('clicked');
-	debugger;
+
+	App.Routers.photosRouter = new App.Routers.PhotosRouter();
+	Backbone.history.start();
+
+	$('#nav-container').fadeOut(1000);
+
+	// debugger;
 	
+
 
 	// $('#nav1').removeClass('fadeIn');
 	// $('#nav1').addClass('fadeOut');
 
+};
+
+App = {
+	Models: {},
+	Collections: {},
+	Views: {},
+	Routers: {}
 };

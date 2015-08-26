@@ -22,9 +22,8 @@ app.use( bodyParser.json() );
 app.use( express.static( path.join( application_root, 'public' ) ) );
 app.use( express.static( path.join( application_root, 'browser' ) ) );
 
-// app.use('/photos', photoRouter);
-
 // Routes
+// app.use('/photos', photoRouter);
 
 // Export app as module
 module.exports = app;

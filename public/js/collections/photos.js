@@ -1,4 +1,8 @@
 App.Collections.Photos = Backbone.Collection.extend({
-	url:'photos',
-	model: App.Models.Photo
+	model: App.Models.Photo,
+
+	initialize: function() {
+		console.log('new photos collection created, bro')
+	}
+
 });
