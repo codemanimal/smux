@@ -2,15 +2,17 @@ var application_root = __dirname,
     express          = require('express'),
     bodyParser       = require('body-parser'),
     path             = require('path'),
-    logger           = require('morgan');
+    logger           = require('morgan'),
     // models           = require('./models'),
     // Photo 					 = models.photos,
-    // photoRouter 		 = require('./routers/photo_router.js');
+    photoRouter 		 = require('./routers/photo_router.js');
 
 var app = express();
 
 // Server Configuration
-app.use( logger('dev') );
+if (process.env.NODE_ENV !== "test") {
+  app.use( logger('dev') );
+}
 // set up request parsing
 app.use( bodyParser.urlencoded({ extended: false }) );
 app.use( bodyParser.json() );
@@ -26,19 +28,3 @@ app.use( express.static( path.join( application_root, 'browser' ) ) );
 
 // Export app as module
 module.exports = app;
-
-
-// FROM ROUTERS FILE
-// var express = require('express'),
-// 		models  = require('..models'),
-// 		Photo   = models.photos;
-
-// var photoRouter = express.Router();
-
-// photoRouter.get('/', function(req, res) {
-// 	Photo
-// 		.findAll()
-// 		.then(function(photos) {
-// 			res.send(photos);
-// 		});
-// });

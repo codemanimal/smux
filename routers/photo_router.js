@@ -1,8 +1,8 @@
-var express          = require('express'),
-    models           = require('../models'),
-    Photo            = models.photos;
+// var express          = require('express'),
+//     models           = require('../models'),
+//     Photo            = models.photos;
 
-var photoRouter = express.Router();
+// var photosRouter = express.Router();
 
 // photosRouter.get('/', function(req, res) {
 // 	Photo
